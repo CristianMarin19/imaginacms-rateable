@@ -11,7 +11,7 @@ class Rating extends Component
   public $view;
   public $params;
   public $model;
-  public $ratingAvg;
+  public $rating;
   public $ratingSum;
   
   /**
@@ -36,7 +36,7 @@ class Rating extends Component
   private function getRatingData(){
 
     $this->ratingSum = $this->model->SumRating;
-    $this->ratingAvg = round($this->model->AverageRating,2);
+    $this->rating = round($this->model->AverageRating,2);
 
 
   }
