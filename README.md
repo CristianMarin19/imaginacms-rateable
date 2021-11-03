@@ -26,7 +26,7 @@ use Rateable;
 ```
 
 2. Component Params:
-	- model = Model where comments will be obtained
+	- model = Model where data will be obtained
 	- layout - (optional) =
 		- rating-layout-1 (default)
 
