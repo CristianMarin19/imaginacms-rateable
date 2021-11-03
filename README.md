@@ -14,3 +14,23 @@ php artisan module:enable Rateable
 ```bash
 php artisan module:migrate Rateable
 ```
+
+## Frontend - Component
+
+1. Add this trait in the model
+```bash
+use Modules\Rateable\Traits\Rateable;
+```
+```bash
+use Rateable;
+```
+
+2. Component Params:
+	- model = Model where comments will be obtained
+	- layout - (optional) =
+		- rating-layout-1 (default)
+
+
+```bash
+<x-rateable::rating :model="$product"/>
+```
