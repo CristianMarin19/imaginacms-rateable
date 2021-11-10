@@ -16,7 +16,8 @@ php artisan module:migrate Rateable
 ```
 
 ## Comments to Module
-You must also follow the installation steps of the Icomments Module
+You must also follow the installation steps of the Icomments Module (Enable Module and run Migrations)
+https://github.com/imagina/imaginacms-icomments/tree/v8.x#enable-the-module
 
 ## Frontend - Component
 
@@ -34,12 +35,13 @@ use Rateable;
 		- rating-layout-1 (default)
 	- rating - Default 0 = If you do not send the MODEL, this value will be taken as the rating
 
-Examples:
-	Get rating from model:
+	Examples:
+
+Get rating from model:
 ```bash
 <x-rateable::rating :model="$product"/>
 ```
-	Set rating value to the component:
+Set rating value to the component:
 ```bash
 <x-rateable::rating rating="5"/>
 ```
