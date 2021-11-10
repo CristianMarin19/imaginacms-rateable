@@ -15,6 +15,9 @@ php artisan module:enable Rateable
 php artisan module:migrate Rateable
 ```
 
+## Comments to Module
+You must also follow the installation steps of the Icomments Module
+
 ## Frontend - Component
 
 1. Add this trait in the model
@@ -26,11 +29,17 @@ use Rateable;
 ```
 
 2. Component Params:
-	- model = Model where data will be obtained
+	- model - (optional) = Model where data will be obtained
 	- layout - (optional) =
 		- rating-layout-1 (default)
+	- rating - Default 0 = If you do not send the MODEL, this value will be taken as the rating
 
-
+Examples:
+	Get rating from model:
 ```bash
 <x-rateable::rating :model="$product"/>
+```
+	Set rating value to the component:
+```bash
+<x-rateable::rating rating="5"/>
 ```

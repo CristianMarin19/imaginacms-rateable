@@ -12,20 +12,20 @@ class Rating extends Component
   public $params;
   public $model;
   public $rating;
-  public $ratingSum;
+  
   
   /**
    * Create a new component instance.
    *
    * @return void
    */
-  public function __construct($layout = "rating-layout-1", $model,$params = [])
+  public function __construct($layout = "rating-layout-1", $model=null,$rating=0,$params = [])
   {
 
     $this->view = "rateable::frontend.components.rating.layouts.$layout.index";
     $this->model = $model;
+    $this->rating = $rating;
     $this->params = $params;
-
     $this->getRatingData();
     
   }
@@ -35,9 +35,9 @@ class Rating extends Component
   */
   private function getRatingData(){
 
-    $this->ratingSum = $this->model->SumRating;
-    $this->rating = round($this->model->AverageRating,2);
-
+    if(!is_null($this->model)){
+      $this->rating = round($this->model->AverageRating,2);
+    }
 
   }
   /**
