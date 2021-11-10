@@ -4,9 +4,13 @@ namespace Modules\Rateable\Entities;
 
 use Modules\Core\Icrud\Entities\CrudModel;
 
+// Trait Icomments
+use Modules\Icomments\Traits\Commentable;
+
 class Rating extends CrudModel
 {
     
+    use Commentable;
 
     protected $table = 'rateable__ratings';
     public $transformer = 'Modules\Rateable\Transformers\RatingTransformer';
