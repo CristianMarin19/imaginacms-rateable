@@ -36,7 +36,7 @@ class Rating extends Component
   private function getRatingData(){
 
     if(!is_null($this->model)){
-      $this->rating = round($this->model->AverageRating,2);
+      $this->rating = round($this->model->averageRating(),2);
     }
 
   }
