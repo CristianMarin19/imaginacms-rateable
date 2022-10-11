@@ -49,7 +49,7 @@ class RateableServiceProvider extends ServiceProvider
     $this->mergeConfigFrom($this->getModuleConfigFilePath('rateable', 'settings-fields'), "asgard.rateable.settings-fields");
     $this->mergeConfigFrom($this->getModuleConfigFilePath('rateable', 'permissions'), "asgard.rateable.permissions");
 
-    $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+    //$this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
 
     $this->registerComponents();
   }
