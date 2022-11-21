@@ -16,6 +16,7 @@ class RateableDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+        $this->call(RateableModuleTableSeeder::class);
         // $this->call("OthersTableSeeder");
     }
 }
